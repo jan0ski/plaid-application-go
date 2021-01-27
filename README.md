@@ -40,5 +40,6 @@ $ docker run plaid_apply:latest -h
 --github "https://github.com/jan0ski/" \
 --website "https://your-website-here.com"
 --candy "Three Musketeers" \
---superpower "Super speed" \
+--superpower "Super speed"
+"We got your application and we'll get back to you shortly!"
 ```
