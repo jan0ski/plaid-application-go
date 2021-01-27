@@ -18,12 +18,12 @@ type Application struct {
 	Resume        string `json:"resume"`
 	Phone         string `json:"phone"`
 	JobID         string `json:"job_id"`
-	Github        string `json:"github",omitempty`
-	Twitter       string `json:"twitter",omitempty`
-	Website       string `json:"website",omitempty`
-	Location      string `json:"location",omitempty`
-	FavoriteCandy string `json:"favorite_candy",omitempty`
-	Superpower    string `json:"superpower",omitempty`
+	Github        string `json:"github"`
+	Twitter       string `json:"twitter"`
+	Website       string `json:"website"`
+	Location      string `json:"location"`
+	FavoriteCandy string `json:"favorite_candy"`
+	Superpower    string `json:"superpower"`
 }
 
 var (
