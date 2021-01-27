@@ -27,6 +27,7 @@ type Application struct {
 }
 
 var (
+	help       *bool
 	name       *string
 	email      *string
 	resume     *string
@@ -54,6 +55,7 @@ func init() {
 	}
 
 	// Set command line flags
+	help = flag.BoolP("help", "h", false, "Print this help dialogue")
 	name = flag.StringP("name", "n", "", "Your name 🧍")
 	email = flag.StringP("email", "e", "", "Your email address 📧")
 	resume = flag.StringP("resume", "r", "", "A link to your resume 📝")
@@ -69,6 +71,12 @@ func init() {
 
 func main() {
 	flag.Parse()
+
+	// If help flag present, print usage
+	if *help {
+		flag.Usage()
+		return
+	}
 
 	// Check that required fields are included
 	required := []string{*name, *email, *resume, *phone, *jobID}
